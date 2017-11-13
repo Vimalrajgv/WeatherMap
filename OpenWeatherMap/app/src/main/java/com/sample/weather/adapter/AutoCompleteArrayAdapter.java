@@ -1,6 +1,7 @@
 package com.sample.weather.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import java.util.List;
 
 
 /**
- * Adapter used to display the search history.
+ * Adapter used to display the search histor
  * Created by VimalRaj on 11/12/2017.
  */
 public class AutoCompleteArrayAdapter extends ArrayAdapter<String> {
