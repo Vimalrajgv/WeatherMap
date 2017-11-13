@@ -9,38 +9,69 @@
         android:id="@+id/txtDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:padding="@dimen/dp_2_0"
+        android:textSize="@dimen/sp_2_0"
         tools:text="November" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtDate"
-        android:padding="20dp">
+        android:padding="@dimen/dp_2_0">
 
         <TextView
             android:id="@+id/txtTemperature"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/dp_1_5_0"
+            android:layout_height="@dimen/dp_1_0_0"
             android:layout_alignParentLeft="true"
-            android:padding="20dp"
-            tools:text="70 F" />
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_4_0"
+            tools:text="70.2 F" />
 
-        <ImageView
-            android:id="@+id/imgWeatherIcon"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_alignParentRight="true" />
-
-        <TextView
-            android:id="@+id/txtDescription"
+        <LinearLayout
+            android:id="@+id/ll_imgWeatherIcon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/imgWeatherIcon"
-            android:gravity="right"
-            android:padding="20dp"
-            tools:text="Clear" />
+            android:layout_below="@+id/txtTemperature"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgWeatherIcon"
+                android:layout_width="@dimen/dp_1_5_0"
+                android:layout_height="@dimen/dp_1_0_0" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="@dimen/dp_2_0"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_2_0"
+                tools:text="Clear" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_1_0_0"
+            android:layout_below="@+id/ll_imgWeatherIcon"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_3_0"
+            tools:text="Humidity : 87" />
+
+
+        <TextView
+            android:id="@+id/txtPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_1_0_0"
+            android:layout_below="@+id/txtHumidity"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_3_0"
+            tools:text="Pressure : 1000" />
+
 
     </RelativeLayout>
 

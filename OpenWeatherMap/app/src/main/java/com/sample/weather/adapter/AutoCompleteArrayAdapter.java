@@ -9,8 +9,11 @@ import android.widget.TextView;
 
 import com.sample.weather.activity.WeatherActivity;
 
+import java.util.List;
+
 
 /**
+ * Adapter used to display the search history.
  * Created by VimalRaj on 11/12/2017.
  */
 public class AutoCompleteArrayAdapter extends ArrayAdapter<String> {
@@ -19,13 +22,13 @@ public class AutoCompleteArrayAdapter extends ArrayAdapter<String> {
 
     private Context mContext;
     private int layoutResourceId;
-    private String data[] = null;
+    private List<String> queryList = null;
 
-    public AutoCompleteArrayAdapter(Context context, int layoutResourceId, String[] data) {
-        super(context, layoutResourceId, data);
+    public AutoCompleteArrayAdapter(Context context, int layoutResourceId, List<String> list) {
+        super(context, layoutResourceId, list);
         this.layoutResourceId = layoutResourceId;
         this.mContext = context;
-        this.data = data;
+        this.queryList = list;
     }
 
     @Override
@@ -37,8 +40,8 @@ public class AutoCompleteArrayAdapter extends ArrayAdapter<String> {
                 LayoutInflater inflater = ((WeatherActivity) mContext).getLayoutInflater();
                 convertView = inflater.inflate(layoutResourceId, parent, false);
             }
-            // object item based on the position
-            String searchItem = data[position];
+            // item based on the position
+            String searchItem = queryList.get(position);
             // get the TextView and then set the text
             TextView textItem = (TextView) convertView.findViewById(com.sample.weather.R.id.txtItem);
             textItem.setText(searchItem);

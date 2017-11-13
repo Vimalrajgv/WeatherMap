@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">OpenWeatherMap</string>
     <string name="action_settings">Settings</string>
+    <string name="no_records">No Records Found.Please refine your search criteria.</string>
+    <string name="units">imperial</string>
+    <string name="app_key">8fa716580744fefa5380aaae93949e93</string>
+    <string name="hint_enter_city">Enter city name</string>
+    <string name="hint_search">Search</string>
+    <string name="fahrenheit">°F</string>
+    <string name="label_pressure">Pressure : </string>
+    <string name="label_humidity">Humidity : </string>
 </resources>

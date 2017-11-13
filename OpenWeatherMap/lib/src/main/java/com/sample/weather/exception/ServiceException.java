@@ -1,6 +1,7 @@
 package com.sample.weather.exception;
 
 /**
+ * Custom exception class for service calls.
  * Created by VimalRaj on 11/12/2017.
  */
 
