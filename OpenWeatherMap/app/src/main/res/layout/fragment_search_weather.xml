@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.sample.weather.fragment.SearchWeatherFragment"
+    android:orientation="horizontal">
+
+    <AutoCompleteTextView
+        android:id="@+id/txtAutoInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter city"
+        android:maxLines="1"
+        android:layout_toLeftOf="@+id/btnSearch"
+        android:layout_toStartOf="@+id/btnSearch" >
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Search"
+        android:layout_marginRight="5dp"
+        android:id="@+id/btnSearch"
+        android:enabled="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
