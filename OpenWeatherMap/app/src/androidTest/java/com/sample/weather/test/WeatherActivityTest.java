@@ -1,6 +1,7 @@
 package com.sample.weather.test;
 
 import android.support.test.espresso.ViewInteraction;
+import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -32,6 +33,7 @@ import static org.hamcrest.core.IsNot.not;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
+@LargeTest
 public class WeatherActivityTest {
 
     @Rule
